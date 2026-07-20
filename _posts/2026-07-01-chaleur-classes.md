@@ -2,7 +2,8 @@
 title: "Chaleur dans les classes : jusqu'à 38 °C"
 date: 2026-07-01
 slug: chaleur-classes
-tag: "Michelet · Cadre de vie"
+etablissement: "Collège Michelet"
+tag: "Cadre de vie"
 summary: "Où en est le projet de végétalisation initié avec le collège, et les pistes évoquées avec le Département."
 ---
 

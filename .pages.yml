@@ -27,8 +27,21 @@ content:
         label: "Identifiant pour l'adresse (minuscules, tirets, sans accent)"
         type: string
         required: true
+      - name: etablissement
+        label: Établissement concerné
+        type: select
+        required: true
+        options:
+          values:
+            - Toutes sections
+            - École maternelle Lakanal
+            - École élémentaire Lakanal
+            - Collège Fermat
+            - Collège Michelet
+            - Collège Les Chalets
+            - Lycée Fermat
       - name: tag
-        label: "Étiquette (ex. Michelet · Travaux)"
+        label: "Thème (facultatif — ex. Travaux, Cantine, Vente)"
         type: string
       - name: thumbnail
         label: Image principale (facultatif)

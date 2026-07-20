@@ -11,16 +11,15 @@ layout: default
         <a class="btn btn-rose" href="https://www.helloasso.com/associations/apic31/adhesions/bulletin-d-inscription-a-l-apic-2026-2027">Adhérer en ligne — 12 €</a>
         <a class="btn btn-ghost" href="#actu">Lire nos actualités</a>
       </div>
-    </div>
-    <aside class="idcard" aria-label="L'APIC en bref">
-      <span class="k">L'APIC en bref</span>
-      <ul>
-        <li><span class="lbl">Adhésion, par famille</span><span class="val">12 €/an</span></li>
-        <li><span class="lbl">Établissements</span><span class="val">6</span></li>
-        <li><span class="lbl">Statut</span><span class="val">Loi 1901</span></li>
-        <li><span class="lbl">Depuis</span><span class="val">1989</span></li>
+      <ul class="facts" aria-label="L'APIC en bref">
+        <li><b>12 €</b> par an et par famille</li>
+        <li><b>6</b> établissements</li>
+        <li>depuis <b>1989</b></li>
       </ul>
-    </aside>
+    </div>
+    <div class="hero-img">
+      <img src="{{ '/assets/accueil.jpg' | relative_url }}" alt="L'APIC, association de parents d'élèves à Toulouse">
+    </div>
   </div>
 </section>
 
@@ -29,7 +28,7 @@ layout: default
   <div class="cards">
     {% for post in site.posts %}
     <article class="card">
-      <div class="meta">{% if post.tag %}<span class="tag">{{ post.tag }}</span>{% endif %}<span class="date">{{ post.date | date: "%d/%m/%Y" }}</span></div>
+      <div class="meta">{% if post.etablissement %}<span class="tag">{{ post.etablissement }}</span>{% endif %}<span class="date">{{ post.date | date: "%d/%m/%Y" }}{% if post.tag %} · {{ post.tag }}{% endif %}</span></div>
       <h3>{{ post.title }}</h3>
       <p>{{ post.summary }}</p>
       <a class="read" href="{{ post.url | relative_url }}">Lire →</a>
@@ -41,12 +40,12 @@ layout: default
 <section class="sec wrap" id="etab">
   <div class="sec-head"><h2>Nos établissements</h2></div>
   <div class="etab">
-    <a href="{{ '/etablissements/ecole-maternelle-lakanal/' | relative_url }}"><span class="lvl">École maternelle</span><h3>Lakanal</h3><p>Dès la maternelle.</p></a>
-    <a href="{{ '/etablissements/ecole-elementaire-lakanal/' | relative_url }}"><span class="lvl">École élémentaire</span><h3>Lakanal</h3><p>Du CP au CM2.</p></a>
-    <a href="{{ '/etablissements/college-fermat/' | relative_url }}"><span class="lvl">Collège</span><h3>Fermat</h3><p>La vie des collégiens.</p></a>
-    <a href="{{ '/etablissements/college-michelet/' | relative_url }}"><span class="lvl">Collège</span><h3>Michelet</h3><p>Actualités, travaux, cadre de vie.</p></a>
-    <a href="{{ '/etablissements/college-les-chalets/' | relative_url }}"><span class="lvl">Collège</span><h3>Les Chalets</h3><p>La vie des élèves au collège.</p></a>
-    <a href="{{ '/etablissements/lycee-fermat/' | relative_url }}"><span class="lvl">Lycée</span><h3>Fermat</h3><p>Du lycée aux classes préparatoires.</p></a>
+    <a href="{{ '/etablissements/ecole-maternelle-lakanal/' | relative_url }}"><span class="lvl">École maternelle</span><h3>Lakanal</h3></a>
+    <a href="{{ '/etablissements/ecole-elementaire-lakanal/' | relative_url }}"><span class="lvl">École élémentaire</span><h3>Lakanal</h3></a>
+    <a href="{{ '/etablissements/college-fermat/' | relative_url }}"><span class="lvl">Collège</span><h3>Fermat</h3></a>
+    <a href="{{ '/etablissements/college-michelet/' | relative_url }}"><span class="lvl">Collège</span><h3>Michelet</h3></a>
+    <a href="{{ '/etablissements/college-les-chalets/' | relative_url }}"><span class="lvl">Collège</span><h3>Les Chalets</h3></a>
+    <a href="{{ '/etablissements/lycee-fermat/' | relative_url }}"><span class="lvl">Lycée</span><h3>Fermat</h3></a>
   </div>
 </section>
 
@@ -57,7 +56,7 @@ layout: default
       <div class="act"><div class="n">01</div><h3>Représenter</h3><p>Vos élus siègent aux conseils d'administration des collèges et lycées et aux conseils d'école, et portent votre voix toute l'année auprès des équipes et de la direction.</p></div>
       <div class="act"><div class="n">02</div><h3>Informer</h3><p>Par mail, via Pronote, sur les groupes WhatsApp des adhérents et sur ce site : nous vous tenons informés au fil de l'année.</p></div>
       <div class="act"><div class="n">03</div><h3>Améliorer le cadre de vie des élèves</h3><p>Nous suivons les dossiers qui comptent — travaux, sécurité, cantine, chaleur dans les classes — et relançons pour faire avancer les choses.</p></div>
-      <div class="act"><div class="n">04</div><h3>Organiser des événements</h3><p>Nous organisons des moments conviviaux pour financer des projets pédagogiques au bénéfice des élèves.</p></div>
+      <div class="act"><div class="n">04</div><h3>Organiser ventes et événements</h3><p>Ventes de gâteaux, de sweats au logo de l'établissement, de chocolats de Noël, lotos… ces actions financent des projets pédagogiques au bénéfice des élèves.</p></div>
     </div>
   </div>
 </section>

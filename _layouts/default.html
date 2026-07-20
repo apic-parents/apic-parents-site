@@ -52,13 +52,14 @@
   .hero h1{font-size:clamp(2.1rem,4.6vw,3.35rem);letter-spacing:-.02em;margin:14px 0 0}
   .hero .lede{margin-top:18px;font-size:1.08rem;color:var(--muted);max-width:38ch}
   .hero .cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-  .idcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
-  .idcard .k{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
-  .idcard ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
-  .idcard li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;border-bottom:1px dashed var(--line);padding-bottom:12px}
-  .idcard li:last-child{border-bottom:0;padding-bottom:0}
-  .idcard .val{font-family:var(--display);font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
-  .idcard .lbl{color:var(--muted);font-size:.92rem}
+  .facts{list-style:none;display:flex;flex-wrap:wrap;gap:10px 26px;margin:28px 0 0;padding:0;
+    color:var(--muted);font-size:.92rem}
+  .facts li{display:flex;align-items:baseline;gap:6px}
+  .facts li+li{padding-left:26px;border-left:1px solid var(--line)}
+  .facts b{font-family:var(--display);font-weight:700;color:var(--ink);font-size:1.08rem;
+    font-variant-numeric:tabular-nums}
+  .hero-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;
+    border:1px solid var(--line);box-shadow:var(--shadow)}
 
   .sec{padding:34px 0 8px}
   .sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
@@ -101,6 +102,8 @@
   .post-body ul{margin:14px 0;padding-left:22px}
   .post-body li{margin:6px 0}
   .post-body a{color:var(--rose-deep)}
+  .post-body a.btn-rose{color:#fff}
+  .post-body a.btn-ghost{color:var(--ink)}
   .attach{margin-top:30px;background:var(--rose-soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
   .attach h3{font-size:1rem;margin-bottom:8px}
   .attach ul{margin:0;padding-left:20px}

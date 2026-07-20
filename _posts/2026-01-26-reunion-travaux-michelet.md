@@ -2,7 +2,8 @@
 title: "Réunion travaux : ce que le Département a répondu"
 date: 2026-01-26
 slug: reunion-travaux-michelet
-tag: "Michelet · Travaux"
+etablissement: "Collège Michelet"
+tag: "Travaux"
 summary: "Fissures, sécurisation de l'entrée, chaleur dans les salles, rideaux… le compte rendu de notre audience avec les élus du CD31."
 ---
 

@@ -2,15 +2,38 @@
 layout: default
 title: "Collège Les Chalets"
 permalink: /etablissements/college-les-chalets/
+etab: "Collège Les Chalets"
 ---
 <article class="wrap post">
   <span class="eyebrow">Collège</span>
   <h1>Collège Les Chalets</h1>
   <div class="post-body">
-    <p>L'APIC accompagne les familles du collège Les Chalets. Vos élus siègent au <strong>conseil d'administration</strong> et portent votre voix sur la vie des élèves au collège.</p>
-    <p><strong>Votre contact APIC pour le collège Les Chalets :</strong><br>
+    <p>L'APIC accompagne les familles du collège Les Chalets. Vos élus siègent au <strong>conseil d'administration</strong> et vous représentent tout au long de l'année auprès des équipes et de la direction.</p>
+    <p><strong>Votre contact APIC :</strong><br>
     <a href="mailto:apic.leschalets@gmail.com">apic.leschalets@gmail.com</a></p>
     <p><a class="btn btn-rose" href="https://www.helloasso.com/associations/apic31/adhesions/bulletin-d-inscription-a-l-apic-2026-2027">Adhérer à l'APIC</a></p>
   </div>
-  <a class="back" href="{{ '/' | relative_url }}#etab">← Tous les établissements</a>
+
+  {% assign p1 = site.posts | where: "etablissement", page.etab %}
+  {% assign p2 = site.posts | where: "etablissement", "Toutes sections" %}
+  {% assign posts_etab = p1 | concat: p2 | sort: "date" | reverse %}
+  <section class="sec">
+    <div class="sec-head"><h2>Actualités</h2></div>
+    {% if posts_etab.size > 0 %}
+    <div class="cards">
+      {% for post in posts_etab %}
+      <article class="card">
+        <div class="meta"><span class="tag">{{ post.etablissement }}</span><span class="date">{{ post.date | date: "%d/%m/%Y" }}</span></div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.summary }}</p>
+        <a class="read" href="{{ post.url | relative_url }}">Lire &rarr;</a>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p style="color:var(--muted)">Pas encore d'actualité pour cet établissement.</p>
+    {% endif %}
+  </section>
+
+  <a class="back" href="{{ '/' | relative_url }}#etab">&larr; Tous les établissements</a>
 </article>
