@@ -2,11 +2,11 @@
 title: "Réunion travaux : ce que le Département a répondu"
 date: 2026-01-26
 slug: reunion-travaux-michelet
-etablissement: "Collège Michelet"
-tag: "Travaux"
-summary: "Fissures, sécurisation de l'entrée, chaleur dans les salles, rideaux… le compte rendu de notre audience avec les élus du CD31."
+etablissement: Collège Michelet
+tag: Travaux
+summary: Fissures, sécurisation de l'entrée, chaleur dans les salles, rideaux…
+  le compte rendu de notre audience avec les élus du CD31.
 ---
-
 Le 26 janvier 2026, l'APIC a assisté à une réunion avec les élus du Département, faisant suite à notre demande d'audience d'avril 2025.
 
 ## Les principaux points
