@@ -7,11 +7,22 @@ etab: "Lycée Fermat"
 <article class="wrap post">
   <span class="eyebrow">Lycée</span>
   <h1>Lycée Fermat</h1>
+  <div class="etab-photo">
+    <img src="{{ '/assets/etab-lycee-fermat.jpg' | relative_url }}" alt="Lycée Fermat">
+
+  </div>
   <div class="post-body">
     <p>L'APIC accompagne les familles du lycée Fermat. Vos élus siègent au <strong>conseil d'administration</strong> et vous représentent tout au long de l'année auprès des équipes et de la direction.</p>
     <p><strong>Votre contact APIC :</strong><br>
     <a href="mailto:apic.lyceefermat@gmail.com">apic.lyceefermat@gmail.com</a></p>
     <p><a class="btn btn-rose" href="https://www.helloasso.com/associations/apic31/adhesions/bulletin-d-inscription-a-l-apic-2026-2027">Adhérer à l'APIC</a></p>
+  </div>
+
+  <div class="infobox">
+    <h3>Coordonnées de l'établissement</h3>
+    <p>Parvis des Jacobins<br>31000 Toulouse</p>
+    <p>Tél. <a href="tel:+33562154215">05 62 15 42 15</a></p>
+    <p><a href="https://fermat.entmip.fr/" target="_blank" rel="noopener">Site du lycée &rarr;</a></p>
   </div>
 
   {% assign p1 = site.posts | where: "etablissement", page.etab %}
