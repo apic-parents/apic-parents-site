@@ -1,0 +1,5 @@
+title: "APIC — Association de Parents Indépendants"
+description: "Parents d'élèves indépendants à Toulouse — écoles Lakanal, collèges Michelet et Les Chalets, collège et lycée Fermat."
+baseurl: "/apic-parents-site"
+future: true
+permalink: /actualites/:year/:month/:day/:title/

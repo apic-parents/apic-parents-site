@@ -1,0 +1,53 @@
+media:
+  input: assets/uploads
+  output: /assets/uploads
+
+content:
+  - name: actualites
+    label: Actualités
+    type: collection
+    path: _posts
+    filename: '{year}-{month}-{day}-{fields.slug}.md'
+    view:
+      fields:
+        - title
+        - date
+    fields:
+      - name: title
+        label: Titre
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: slug
+        label: "Identifiant pour l'adresse (minuscules, tirets, sans accent)"
+        type: string
+        required: true
+      - name: tag
+        label: "Étiquette (ex. Michelet · Travaux)"
+        type: string
+      - name: thumbnail
+        label: Image principale (facultatif)
+        type: image
+      - name: summary
+        label: "Résumé (affiché sur la page d'accueil)"
+        type: text
+      - name: attachments
+        label: "Fichiers joints (PDF…)"
+        type: object
+        list: true
+        fields:
+          - name: file
+            label: Fichier
+            type: file
+          - name: label
+            label: Nom affiché
+            type: string
+      - name: body
+        label: "Contenu de l'article"
+        type: rich-text
+        body: true
