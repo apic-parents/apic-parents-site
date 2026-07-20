@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="wrap post">
+  {% if page.tag %}<span class="eyebrow">{{ page.tag }}</span>{% endif %}
+  <h1>{{ page.title }}</h1>
+  <p class="pdate">{{ page.date | date: "%d/%m/%Y" }}</p>
+  {% if page.thumbnail %}<img class="thumb" src="{{ page.thumbnail | relative_url }}" alt="">{% endif %}
+  <div class="post-body">
+    {{ content }}
+  </div>
+  {% if page.attachments and page.attachments.size > 0 %}
+  <div class="attach">
+    <h3>Documents à télécharger</h3>
+    <ul>
+      {% for a in page.attachments %}
+      <li><a href="{{ a.file | relative_url }}">{{ a.label | default: a.file }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  <a class="back" href="{{ '/' | relative_url }}#actu">← Retour aux actualités</a>
+</article>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.summary | default: site.description }}">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  :root{
+    --rose:#E11A7E; --rose-deep:#B80F63; --rose-soft:#FCEBF3;
+    --ink:#1C1519; --muted:#6E6068; --paper:#FDFBFC; --surface:#FFFFFF;
+    --line:#EEE1E9; --logo-invert:0;
+    --shadow-sm:0 1px 2px rgba(28,21,25,.05);
+    --shadow:0 2px 6px rgba(28,21,25,.05), 0 14px 34px rgba(184,15,99,.07);
+    --display:"Century Gothic","Futura","Avenir Next",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --rose:#FF5DA8; --rose-deep:#FF86BF; --rose-soft:#2C1622;
+      --ink:#F2E9EE; --muted:#B49FAB; --paper:#130F15; --surface:#1B141E;
+      --line:#2E2431; --logo-invert:1;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.4);
+      --shadow:0 2px 6px rgba(0,0,0,.35), 0 16px 40px rgba(0,0,0,.45);
+    }
+  }
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.1;margin:0}
+  p{margin:0}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-deep);font-weight:700}
+  :where(a,button):focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:4px}
+
+  .site-header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .site-header .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px;max-width:1080px;margin:0 auto}
+  .logo{display:flex;align-items:center}
+  .logo img{height:34px;width:auto;filter:invert(var(--logo-invert))}
+  nav.main{display:flex;gap:26px;align-items:center}
+  nav.main a{font-size:.92rem;font-weight:600;color:var(--ink);text-decoration:none;opacity:.82}
+  nav.main a:hover{opacity:1;color:var(--rose-deep)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--body);font-weight:650;font-size:.92rem;padding:10px 18px;border-radius:999px;border:1px solid transparent;cursor:pointer;text-decoration:none}
+  .btn-rose{background:var(--rose);color:#fff;box-shadow:0 2px 10px rgba(184,15,99,.28)}
+  .btn-rose:hover{background:var(--rose-deep)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--rose);color:var(--rose-deep)}
+
+  .hero{padding:64px 0 40px}
+  .hero .grid{display:grid;grid-template-columns:1.45fr .95fr;gap:44px;align-items:center}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.35rem);letter-spacing:-.02em;margin:14px 0 0}
+  .hero .lede{margin-top:18px;font-size:1.08rem;color:var(--muted);max-width:38ch}
+  .hero .cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .idcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+  .idcard .k{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .idcard ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:12px}
+  .idcard li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;border-bottom:1px dashed var(--line);padding-bottom:12px}
+  .idcard li:last-child{border-bottom:0;padding-bottom:0}
+  .idcard .val{font-family:var(--display);font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+  .idcard .lbl{color:var(--muted);font-size:.92rem}
+
+  .sec{padding:34px 0 8px}
+  .sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.01em}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:20px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:11px;box-shadow:var(--shadow-sm);transition:transform .18s ease,box-shadow .18s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+  .card .meta{display:flex;align-items:center;gap:10px;font-size:.74rem;flex-wrap:wrap}
+  .tag{background:var(--rose-soft);color:var(--rose-deep);font-weight:700;letter-spacing:.03em;padding:3px 10px;border-radius:999px;text-transform:uppercase;font-size:.68rem}
+  .card .date{color:var(--muted);letter-spacing:.02em}
+  .card h3{font-size:1.16rem;letter-spacing:-.01em}
+  .card p{color:var(--muted);font-size:.95rem}
+  .card .read{margin-top:auto;font-weight:650;color:var(--rose-deep);text-decoration:none;font-size:.92rem}
+  .card .read:hover{text-decoration:underline}
+
+  .etab{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+  .etab a{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;display:flex;flex-direction:column;gap:6px;transition:border-color .18s ease}
+  .etab a:hover{border-color:var(--rose)}
+  .etab h3{font-size:1.05rem}
+  .etab .lvl{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose-deep);font-weight:700}
+  .etab p{color:var(--muted);font-size:.9rem}
+
+  .actions{margin-top:44px;background:var(--rose-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .actions .in{padding:40px 0}
+  .actions .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:22px}
+  .act h3{font-size:1.06rem;margin-bottom:6px}
+  .act p{color:var(--muted);font-size:.94rem}
+  .act .n{font-family:var(--display);font-weight:700;color:var(--rose);font-size:.9rem;letter-spacing:.1em}
+
+  .post{max-width:760px;padding:48px 24px 30px}
+  .post h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.02em;margin:12px 0 0}
+  .post .pdate{color:var(--muted);margin-top:10px;font-size:.95rem}
+  .post .thumb{border-radius:16px;margin:24px 0;border:1px solid var(--line)}
+  .post-body{margin-top:22px;line-height:1.75;font-size:1.05rem}
+  .post-body h2{font-size:1.4rem;margin:28px 0 10px}
+  .post-body h3{font-size:1.15rem;margin:22px 0 8px}
+  .post-body p{margin:14px 0}
+  .post-body ul{margin:14px 0;padding-left:22px}
+  .post-body li{margin:6px 0}
+  .post-body a{color:var(--rose-deep)}
+  .attach{margin-top:30px;background:var(--rose-soft);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .attach h3{font-size:1rem;margin-bottom:8px}
+  .attach ul{margin:0;padding-left:20px}
+  .attach a{color:var(--rose-deep);font-weight:600}
+  .back{display:inline-block;margin-top:30px;font-weight:650;color:var(--rose-deep);text-decoration:none}
+  .back:hover{text-decoration:underline}
+
+  .site-footer{padding:44px 0 40px;color:var(--muted);font-size:.9rem}
+  .site-footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:start}
+  .site-footer img{height:30px;filter:invert(var(--logo-invert));opacity:.9;margin-bottom:10px}
+  .site-footer a{color:var(--rose-deep);text-decoration:none}
+  .site-footer a:hover{text-decoration:underline}
+  .site-footer .fine{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:.82rem}
+
+  @media (max-width:760px){
+    .hero .grid{grid-template-columns:1fr;gap:30px}
+    nav.main{display:none}
+    .hero{padding:40px 0 26px}
+  }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar">
+      <a class="logo" href="{{ '/' | relative_url }}" aria-label="APIC — accueil"><img src="{{ '/assets/logo.png' | relative_url }}" alt="APIC"></a>
+      <nav class="main">
+        <a href="{{ '/' | relative_url }}">Accueil</a>
+        <a href="{{ '/' | relative_url }}#actu">Actualités</a>
+        <a href="{{ '/' | relative_url }}#etab">Établissements</a>
+        <a href="{{ '/' | relative_url }}#actions">Nos actions</a>
+        <a href="{{ '/' | relative_url }}#contact">Contact</a>
+      </nav>
+      <a class="btn btn-rose" href="https://www.helloasso.com/associations/apic31/adhesions/bulletin-d-inscription-a-l-apic-2026-2027">Adhérer</a>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap top">
+      <div>
+        <img src="{{ '/assets/logo.png' | relative_url }}" alt="APIC">
+        <p>Association de Parents Indépendants · Toulouse.<br>Écoles Lakanal · Collèges Michelet et Les Chalets · Collège et lycée Fermat.</p>
+      </div>
+      <div>
+        <p><b style="color:var(--ink)">Nous écrire</b><br>
+        <a href="mailto:apic.michelet@gmail.com">apic.michelet@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="wrap fine">APIC — Association de Parents Indépendants · Toulouse · © 2026</div>
+  </footer>
+</body>
+</html>
