@@ -2,7 +2,7 @@
 title: Bienvenue sur le nouveau site de l'APIC
 date: 2026-07-20
 slug: bienvenue-nouveau-site
-tag: Toutes sections
+etablissement: Toutes sections
 summary: "L'APIC fait peau neuve en ligne : un site unique pour toutes nos
   sections, plus clair et à jour. Bienvenue !"
 ---
