@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Actualités"
+permalink: /actualites/
+---
+<section class="wrap page-head">
+  <span class="eyebrow">L'APIC en action</span>
+  <h1>Actualités</h1>
+  <p>Toutes nos actualités, de la plus récente à la plus ancienne — comptes rendus, travaux, ventes et temps forts de la vie des élèves.</p>
+</section>
+
+<section class="sec wrap">
+  {% if site.posts.size > 0 %}
+  <div class="cards">
+    {% for post in site.posts %}
+    <article class="card">
+      <div class="meta">{% if post.etablissement %}<span class="tag">{{ post.etablissement }}</span>{% endif %}<span class="date">{{ post.date | date: "%d/%m/%Y" }}{% if post.tag %} · {{ post.tag }}{% endif %}</span></div>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.summary }}</p>
+      <a class="read" href="{{ post.url | relative_url }}">Lire &rarr;</a>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p style="color:var(--muted)">Pas encore d'actualité publiée.</p>
+  {% endif %}
+  <a class="back" href="{{ '/' | relative_url }}">&larr; Retour à l'accueil</a>
+</section>
