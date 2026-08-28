@@ -38,7 +38,7 @@
   .site-header .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px;max-width:1080px;margin:0 auto}
   .logo{display:flex;align-items:center}
   .logo img{height:34px;width:auto;filter:invert(var(--logo-invert))}
-  nav.main{display:flex;gap:26px;align-items:center}
+  nav.main{display:flex;gap:20px;align-items:center}
   nav.main a{font-size:.92rem;font-weight:600;color:var(--ink);text-decoration:none;opacity:.82}
   nav.main a:hover{opacity:1;color:var(--rose-deep)}
   .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--body);font-weight:650;font-size:.92rem;padding:10px 18px;border-radius:999px;border:1px solid transparent;cursor:pointer;text-decoration:none}
@@ -123,6 +123,24 @@
   .back{display:inline-block;margin-top:30px;font-weight:650;color:var(--rose-deep);text-decoration:none}
   .back:hover{text-decoration:underline}
 
+  .about{max-width:66ch}
+  .about p{margin:14px 0;color:var(--muted);font-size:1.02rem;line-height:1.7}
+  .about p:first-child{color:var(--ink);font-size:1.09rem}
+  .sec-head .more{font-weight:650;color:var(--rose-deep);text-decoration:none;font-size:.92rem;white-space:nowrap}
+  .sec-head .more:hover{text-decoration:underline}
+  .page-head{padding:48px 0 0}
+  .page-head h1{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.02em;margin:12px 0 0}
+  .page-head p{color:var(--muted);margin-top:12px;max-width:60ch}
+  .callout{margin-top:30px;background:var(--rose-soft);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .callout p{margin:12px 0}
+  .callout p:first-child{margin-top:0}
+  .callout p:last-child{margin-bottom:0}
+  .callout a{color:var(--rose-deep);font-weight:600}
+  .callout a.btn-rose{color:#fff}
+  .etab-banner{margin:24px 0 0}
+  .etab-banner img{width:100%;border-radius:14px;border:1px solid var(--line)}
+  .etab-banner figcaption{margin-top:7px;font-size:.75rem;color:var(--muted);line-height:1.4}
+
   .site-footer{padding:44px 0 40px;color:var(--muted);font-size:.9rem}
   .site-footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:start}
   .site-footer img{height:30px;filter:invert(var(--logo-invert));opacity:.9;margin-bottom:10px}
@@ -143,9 +161,10 @@
       <a class="logo" href="{{ '/' | relative_url }}" aria-label="APIC — accueil"><img src="{{ '/assets/logo.png' | relative_url }}" alt="APIC"></a>
       <nav class="main">
         <a href="{{ '/' | relative_url }}">Accueil</a>
-        <a href="{{ '/' | relative_url }}#actu">Actualités</a>
+        <a href="{{ '/' | relative_url }}#apic">Qui sommes-nous</a>
         <a href="{{ '/' | relative_url }}#etab">Établissements</a>
         <a href="{{ '/' | relative_url }}#actions">Nos actions</a>
+        <a href="{{ '/' | relative_url }}#actu">Actualités</a>
         <a href="{{ '/' | relative_url }}#contact">Contact</a>
       </nav>
       <a class="btn btn-rose" href="https://www.helloasso.com/associations/apic31/adhesions/bulletin-d-inscription-a-l-apic-2026-2027">Adhérer</a>
