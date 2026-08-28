@@ -123,9 +123,11 @@
   .back{display:inline-block;margin-top:30px;font-weight:650;color:var(--rose-deep);text-decoration:none}
   .back:hover{text-decoration:underline}
 
-  .about{max-width:66ch}
-  .about p{margin:14px 0;color:var(--muted);font-size:1.02rem;line-height:1.7}
+  .about{columns:2;column-gap:48px}
+  .about p{break-inside:avoid;margin:0 0 16px;color:var(--muted);font-size:1.02rem;line-height:1.7}
   .about p:first-child{color:var(--ink);font-size:1.09rem}
+  .about p:last-child{margin-bottom:0}
+  @media(max-width:760px){.about{columns:1}}
   .sec-head .more{font-weight:650;color:var(--rose-deep);text-decoration:none;font-size:.92rem;white-space:nowrap}
   .sec-head .more:hover{text-decoration:underline}
   .page-head{padding:48px 0 0}
