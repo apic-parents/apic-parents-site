@@ -113,6 +113,8 @@ Cette section décrit la manipulation à la main. Si le code vous rebute, ou si 
 | `_layouts/post.html` | La mise en page d'un article d'actualité. |
 | `_posts/` | Le dossier des actualités. **Normalement, on n'y touche pas à la main : on passe par Pages CMS.** |
 | `assets/` | Les images : le logo, la photo d'accueil, les six photos d'établissement. |
+| `assets/favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` | La petite icône affichée dans l'onglet du navigateur, et celle qui apparaît si le site est ajouté à l'écran d'accueil d'un téléphone. |
+| `assets/og-image.jpg` | **L'image de partage.** C'est elle qui s'affiche quand quelqu'un colle le lien du site sur WhatsApp, Facebook ou dans un mail. Sans elle, les applications récupèrent la minuscule icône d'onglet et l'agrandissent : le résultat est très flou. |
 | `assets/uploads/` | Les images et PDF envoyés depuis Pages CMS. |
 | `_config.yml` | Les réglages généraux du site (titre, description). **À ne modifier qu'en connaissance de cause** — voir l'avertissement en section 7. |
 | `.pages.yml` | Le réglage de Pages CMS : la liste des champs d'un article et la liste déroulante des établissements. |
@@ -204,6 +206,9 @@ Si l'APIC s'étend à un nouvel établissement, il y a **quatre** endroits à mo
 **Ne pas renommer le dépôt GitHub.**
 L'adresse du site contient le nom du dépôt (`apic-parents-site`). Ce nom est aussi inscrit dans le fichier `_config.yml`, à la ligne `baseurl`. Si l'un change sans l'autre, **le site s'affiche sans mise en forme et toutes les images disparaissent**. Si vous devez vraiment renommer, changez les deux en même temps.
 
+**Les deux lignes d'adresse de `_config.yml` vont par paire.**
+`url` contient le nom du serveur (`https://apic-parents.github.io`) et `baseurl` le sous-dossier (`/apic-parents-site`). La première sert aux aperçus de partage sur WhatsApp et les réseaux sociaux, la seconde à tous les liens internes du site. **Si l'adresse du site change un jour — voir la section 10 — il faut corriger les deux.**
+
 **Ne pas supprimer le compte GitHub `apic-parents`.**
 Le site disparaîtrait avec lui.
 
@@ -261,7 +266,7 @@ Vérifiez sa date : les articles s'affichent du plus récent au plus ancien, un 
 
 Deux évolutions possibles, si un jour l'association le souhaite :
 
-- **Basculer l'adresse `apic31.fr` vers ce site.** L'association possède déjà ce nom de domaine, mais il pointe aujourd'hui vers l'ancien blog Overblog. On peut le faire pointer vers ce site-ci : l'adresse deviendrait simplement `apic31.fr`, bien plus facile à communiquer aux familles que `apic-parents.github.io/apic-parents-site`. Cela se règle chez le fournisseur du nom de domaine, puis dans les réglages GitHub Pages, et l'hébergement reste gratuit. **Tant que ce n'est pas fait, deux sites de l'APIC coexistent en ligne** — c'est le point à trancher en priorité, car les parents qui cherchent l'association tombent d'abord sur l'ancien.
+- **Basculer l'adresse `apic31.fr` vers ce site.** L'association possède déjà ce nom de domaine, mais il pointe aujourd'hui vers l'ancien blog Overblog. On peut le faire pointer vers ce site-ci : l'adresse deviendrait simplement `apic31.fr`, bien plus facile à communiquer aux familles que `apic-parents.github.io/apic-parents-site`. Cela se règle chez le fournisseur du nom de domaine, puis dans les réglages GitHub Pages — **sans oublier de corriger `url` et `baseurl` dans `_config.yml`** (voir section 7) — et l'hébergement reste gratuit. **Tant que ce n'est pas fait, deux sites de l'APIC coexistent en ligne** — c'est le point à trancher en priorité, car les parents qui cherchent l'association tombent d'abord sur l'ancien.
 - **Une copie de sauvegarde.** Le site vit sur GitHub, mais il est prudent d'en garder une copie hors ligne. Sur la page du dépôt, bouton vert **« Code » › « Download ZIP »** : vous obtenez l'intégralité du site en un fichier. À faire une fois par an, et à ranger dans le Dropbox de l'association.
 
 ---
