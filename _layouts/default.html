@@ -133,7 +133,13 @@
   .credit a{color:var(--muted);text-decoration:underline}
   @media(max-width:700px){.etab-head{grid-template-columns:1fr;gap:18px}}
   .infobox{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-  .etab-head .infobox{margin-top:16px}
+  .etab-aside{float:right;width:min(43%,330px);margin:20px 0 24px 30px}
+  .etab-aside .etab-photo{margin:0}
+  .etab-aside .infobox{margin-top:16px}
+  .post .callout,.post .sec,.post .back{clear:both}
+  @media(max-width:700px){
+    .etab-aside{float:none;width:auto;margin:20px 0 4px}
+  }
   .infobox h3{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0 0 10px}
   .infobox p{margin:8px 0;font-size:.98rem;line-height:1.55}
   .infobox a{color:var(--rose-deep);font-weight:600;text-decoration:none}
