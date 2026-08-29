@@ -13,10 +13,17 @@ etab: "Lycée Fermat"
     <p><strong>Votre contact APIC :</strong><br>
     <a href="mailto:apic.lyceefermat@gmail.com">apic.lyceefermat@gmail.com</a></p>
     </div>
-    <figure class="etab-photo">
-    <img src="{{ '/assets/etab-lycee-fermat.jpg' | relative_url }}" alt="Lycée Fermat">
-
-    </figure>
+    <div>
+      <figure class="etab-photo">
+        <img src="{{ '/assets/etab-lycee-fermat.jpg' | relative_url }}" alt="Lycée Fermat">
+      </figure>
+      <div class="infobox">
+        <h3>Coordonnées de l'établissement</h3>
+        <p>Parvis des Jacobins<br>31000 Toulouse</p>
+        <p>Tél. <a href="tel:+33562154215">05 62 15 42 15</a></p>
+        <p><a href="https://fermat.mon-ent-occitanie.fr/" target="_blank" rel="noopener">Site du lycée &rarr;</a></p>
+      </div>
+    </div>
   </div>
 
   <div class="post-body">
@@ -42,13 +49,6 @@ etab: "Lycée Fermat"
     <p><strong>Nous représentons tous les parents, adhérents ou non.</strong> N'hésitez pas à prendre contact pour toute question ou difficulté au niveau du lycée ou des CPGE — et à adhérer pour suivre plus en détail notre activité : information et échanges par courriel et groupe WhatsApp, formation des délégués, participation à certaines commissions, etc.</p>
     <p><a href="mailto:apic.lyceefermat@gmail.com">apic.lyceefermat@gmail.com</a></p>
     <p><a class="btn btn-rose" href="https://www.helloasso.com/associations/apic31/adhesions/bulletin-d-inscription-a-l-apic-2026-2027">Adhérer à l'APIC</a></p>
-  </div>
-
-  <div class="infobox">
-    <h3>Coordonnées de l'établissement</h3>
-    <p>Parvis des Jacobins<br>31000 Toulouse</p>
-    <p>Tél. <a href="tel:+33562154215">05 62 15 42 15</a></p>
-    <p><a href="https://fermat.entmip.fr/" target="_blank" rel="noopener">Site du lycée &rarr;</a></p>
   </div>
 
   {% assign p1 = site.posts | where: "etablissement", page.etab %}
