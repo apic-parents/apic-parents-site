@@ -133,6 +133,14 @@
   .credit a{color:var(--muted);text-decoration:underline}
   @media(max-width:700px){.etab-head{grid-template-columns:1fr;gap:18px}}
   .infobox{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .boutique{display:flex;gap:22px;align-items:center;margin-top:4px}
+  .boutique img{width:170px;flex:none;height:auto}
+  .boutique p:first-child{margin-top:0}
+  .boutique p:last-child{margin-bottom:0}
+  @media(max-width:560px){
+    .boutique{flex-direction:column;align-items:flex-start;gap:14px}
+    .boutique img{width:150px}
+  }
   .etab-aside{float:right;width:min(43%,330px);margin:20px 0 24px 30px}
   .etab-aside .etab-photo{margin:0}
   .etab-aside .infobox{margin-top:16px}
