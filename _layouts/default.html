@@ -41,9 +41,6 @@
     }
   }
   html{scroll-padding-top:78px}
-  /* « Qui sommes-nous » : on remonte le point d'arrivee pour que
-     l'illustration, placee juste au-dessus, soit entierement visible. */
-  #apic{scroll-margin-top:350px}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased}
   img{max-width:100%;display:block}
   a{color:inherit}
@@ -70,7 +67,7 @@
   .btn-ghost:hover{border-color:var(--rose);color:var(--rose-deep)}
 
   .hero{padding:64px 0 40px}
-  .hero .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:end}
+  .hero .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center}
   .hero h1{font-size:clamp(2.1rem,4.6vw,3.35rem);letter-spacing:-.02em;margin:14px 0 0}
   .hero .lede{margin-top:18px;font-size:1.08rem;color:var(--muted);max-width:38ch}
   .hero .cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
@@ -80,7 +77,6 @@
   .facts li+li{padding-left:26px;border-left:1px solid var(--line)}
   .facts b{font-family:var(--display);font-weight:700;color:var(--ink);font-size:1.08rem;
     font-variant-numeric:tabular-nums}
-  .hero-img{display:block}
   .hero-img img{width:100%;height:auto;border-radius:20px;
     border:1px solid var(--line);box-shadow:var(--shadow)}
   .hero-mark{display:flex;align-items:center;justify-content:center;padding:8px 0}
@@ -202,8 +198,6 @@
     .hero .grid{grid-template-columns:1fr;gap:30px}
     nav.main{display:none}
     .hero{padding:40px 0 26px}
-    /* le menu s'arrete plus haut pour laisser voir toute l'illustration */
-    #apic{scroll-margin-top:280px}
 
     .menu{display:block;position:relative}
     .menu summary{list-style:none;cursor:pointer;width:42px;height:42px;
