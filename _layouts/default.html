@@ -35,7 +35,7 @@
     :root{
       --rose:#FF5DA8; --rose-deep:#FF86BF; --rose-soft:#2C1622;
       --ink:#F2E9EE; --muted:#B49FAB; --paper:#130F15; --surface:#1B141E;
-      --line:#2E2431; --logo-invert:1; --veil:50%; --brique:#793C4E;
+      --line:#2E2431; --logo-invert:1; --veil:0%; --brique:#551A2E;
       --shadow-sm:0 1px 2px rgba(0,0,0,.4);
       --shadow:0 2px 6px rgba(0,0,0,.35), 0 16px 40px rgba(0,0,0,.45);
     }
@@ -54,6 +54,11 @@
     background-color:var(--brique);
     background-image:linear-gradient(color-mix(in srgb,var(--paper) var(--veil),transparent),color-mix(in srgb,var(--paper) var(--veil),transparent)),url('{{ "/assets/mur-rose-3.jpg" | relative_url }}');
     background-size:cover;background-position:center;background-repeat:no-repeat}
+  /* En mode sombre, un voile ecrase l ecart entre brique et joint : on sert donc
+     une texture deja assombrie et fortement contrastee, sans voile par-dessus. */
+  @media (prefers-color-scheme:dark){
+    .site-header{background-image:url('{{ "/assets/mur-rose-3-sombre.jpg" | relative_url }}')}
+  }
   .site-header .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px;max-width:1080px;margin:0 auto}
   .logo{display:flex;align-items:center}
   .logo img{height:34px;width:auto;filter:invert(var(--logo-invert))}
