@@ -25,7 +25,7 @@
   :root{
     --rose:#E11A7E; --rose-deep:#B80F63; --rose-soft:#FCEBF3;
     --ink:#1C1519; --muted:#6E6068; --paper:#FDFBFC; --surface:#FFFFFF;
-    --line:#EEE1E9; --logo-invert:0;
+    --line:#EEE1E9; --logo-invert:0; --veil:25%; --brique:#E5AFA7;
     --shadow-sm:0 1px 2px rgba(28,21,25,.05);
     --shadow:0 2px 6px rgba(28,21,25,.05), 0 14px 34px rgba(184,15,99,.07);
     --display:"Century Gothic","Futura","Avenir Next",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -35,7 +35,7 @@
     :root{
       --rose:#FF5DA8; --rose-deep:#FF86BF; --rose-soft:#2C1622;
       --ink:#F2E9EE; --muted:#B49FAB; --paper:#130F15; --surface:#1B141E;
-      --line:#2E2431; --logo-invert:1;
+      --line:#2E2431; --logo-invert:1; --veil:74%; --brique:#463034;
       --shadow-sm:0 1px 2px rgba(0,0,0,.4);
       --shadow:0 2px 6px rgba(0,0,0,.35), 0 16px 40px rgba(0,0,0,.45);
     }
@@ -50,7 +50,10 @@
   .eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-deep);font-weight:700}
   :where(a,button):focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:4px}
 
-  .site-header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .site-header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);
+    background-color:var(--brique);
+    background-image:linear-gradient(color-mix(in srgb,var(--paper) var(--veil),transparent),color-mix(in srgb,var(--paper) var(--veil),transparent)),url('{{ "/assets/mur-rose.jpg" | relative_url }}');
+    background-size:cover;background-position:center;background-repeat:no-repeat}
   .site-header .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px;max-width:1080px;margin:0 auto}
   .logo{display:flex;align-items:center}
   .logo img{height:34px;width:auto;filter:invert(var(--logo-invert))}
