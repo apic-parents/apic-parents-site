@@ -115,7 +115,7 @@ Cette section décrit la manipulation à la main. Si le code vous rebute, ou si 
 | `_layouts/post.html` | La mise en page d'un article d'actualité. |
 | `_posts/` | Le dossier des actualités. **Normalement, on n'y touche pas à la main : on passe par Pages CMS.** |
 | `assets/` | Les images : le logo, les photos ou illustrations des six établissements. |
-| `assets/accueil.jpg` | **Actuellement inutilisé.** La page d'accueil affiche simplement le logo. Le jour où l'association disposera d'une vraie photo ou d'une illustration d'accueil, elle prendra la place du logo — voir `index.html`, bloc `hero-mark`. |
+| `assets/accueil.jpg` | **L'illustration de la page d'accueil** — des parents au bord de la Garonne. Pour la remplacer, déposez une nouvelle image sous ce même nom : aucune page n'est à modifier. Format conseillé : environ 1400 pixels de large, deux fois plus large que haut, moins de 300 Ko. |
 | `assets/favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` | La petite icône affichée dans l'onglet du navigateur, et celle qui apparaît si le site est ajouté à l'écran d'accueil d'un téléphone. |
 | `assets/og-image.jpg` | **L'image de partage.** C'est elle qui s'affiche quand quelqu'un colle le lien du site sur WhatsApp, Facebook ou dans un mail. Sans elle, les applications récupèrent la minuscule icône d'onglet et l'agrandissent : le résultat est très flou. |
 | `assets/uploads/` | Les images et PDF envoyés depuis Pages CMS. |
