@@ -115,7 +115,7 @@ Cette section décrit la manipulation à la main. Si le code vous rebute, ou si 
 | `_layouts/post.html` | La mise en page d'un article d'actualité. |
 | `_posts/` | Le dossier des actualités. **Normalement, on n'y touche pas à la main : on passe par Pages CMS.** |
 | `assets/` | Les images : le logo, les photos ou illustrations des six établissements. |
-| `assets/accueil.jpg` | **L'illustration de la page d'accueil** — des parents au bord de la Garonne. Pour la remplacer, déposez une nouvelle image sous ce même nom : aucune page n'est à modifier. Format conseillé : environ 1400 pixels de large, deux fois plus large que haut, moins de 300 Ko. |
+| `assets/accueil-2.jpg` | **L'illustration de la page d'accueil.** Format conseillé : environ 1200 pixels de large, une fois et demie plus large que haut, moins de 300 Ko. **Pour la remplacer, voir la règle du numéro ci-dessous.** |
 | `assets/favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` | La petite icône affichée dans l'onglet du navigateur, et celle qui apparaît si le site est ajouté à l'écran d'accueil d'un téléphone. |
 | `assets/og-image.jpg` | **L'image de partage.** C'est elle qui s'affiche quand quelqu'un colle le lien du site sur WhatsApp, Facebook ou dans un mail. Sans elle, les applications récupèrent la minuscule icône d'onglet et l'agrandissent : le résultat est très flou. |
 | `assets/uploads/` | Les images et PDF envoyés depuis Pages CMS. |
@@ -130,8 +130,15 @@ Cette section décrit la manipulation à la main. Si le code vous rebute, ou si 
 **Changer le tarif de l'adhésion ou le lien HelloAsso**
 → Le lien HelloAsso et le tarif figurent à **plusieurs endroits** : dans `index.html` (bouton du haut et ligne « 12 € par an et par famille »), dans `_layouts/default.html` (bouton « Adhérer » du bandeau, présent sur toutes les pages), et dans **chacune des six pages d'établissement**. Pensez à tout passer en revue. Un moyen simple de n'en oublier aucun : utiliser la loupe de recherche de GitHub sur `helloasso`.
 
-**Remplacer une photo**
-→ Le plus simple est de garder exactement le même nom de fichier : sur GitHub, ouvrir le dossier `assets`, puis **« Add file » › « Upload files »**, et déposer la nouvelle image avec le même nom. Elle remplacera l'ancienne, et aucune page n'est à modifier. Format conseillé : JPEG, largeur d'environ 1200 pixels, moins de 300 Ko.
+**Remplacer une photo ou une illustration — la règle du numéro**
+
+→ **Déposez la nouvelle image sous un nom numéroté**, en incrémentant : si la page affiche `accueil-2.jpg`, appelez la suivante `accueil-3.jpg`. Puis corrigez le nom dans la page qui l'utilise (`index.html` pour l'accueil).
+
+Pourquoi ne pas simplement réutiliser le même nom ? Parce que les navigateurs gardent les images en mémoire. En conservant le nom, vous — et tous les parents ayant déjà visité le site — continueriez de voir l'ancienne image pendant des jours, sans comprendre pourquoi. Changer le numéro force le rechargement immédiat pour tout le monde.
+
+Format conseillé : JPEG, largeur d'environ 1200 pixels, moins de 300 Ko.
+
+> **Ménage.** Les anciennes images restent dans `assets` sans être affichées. Une fois la nouvelle version validée depuis plusieurs jours, supprimez-les : ouvrez le fichier sur GitHub et utilisez le menu **« … » › « Delete file »**. Rien ne presse — elles ne pèsent que quelques centaines de kilo-octets.
 
 **Changer le texte d'accueil ou les encadrés « Ce que nous faisons »**
 → Dans `index.html`.
