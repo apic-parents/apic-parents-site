@@ -80,7 +80,7 @@ Les identifiants de connexion **ne figurent pas dans ce guide** (il est public).
 
 À côté d'« Actualités », Pages CMS propose une rubrique **« Annonces »**. Elle sert aux informations courtes et datées : une réunion, une date limite d'inscription, une vente qui se termine.
 
-Une annonce s'affiche dans un **bandeau rose, juste sous le menu**. Quatre champs :
+Une annonce s'affiche dans un **bandeau clair marqué « À noter », juste sous le menu**. Quatre champs :
 
 | Champ | Explication |
 |---|---|
