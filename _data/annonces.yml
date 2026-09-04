@@ -1,5 +1,7 @@
 liste:
-  - texte: Réunion d'information le mardi 15 septembre à 18h, site de Saint-Aubin,
-      pour les nouveaux et les anciens adhérents.
+  - texte: Réunion de rentrée le mardi 15 septembre à 18 h, site de Saint-Aubin —
+      ouverte à tous les parents, adhérents ou non.
     etablissement: Collège Michelet
-    jusquau: 2026-09-16
+    jusquau: 2026-09-15
+    lien: mailto:apic.michelet@gmail.com
+    lien_label: Prévenez-nous si possible de votre venue
