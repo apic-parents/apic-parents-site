@@ -3,6 +3,46 @@ media:
   output: /assets/uploads
 
 content:
+  - name: annonces
+    label: Annonces
+    type: file
+    path: _data/annonces.yml
+    fields:
+      - name: liste
+        label: "Annonces en cours — elles disparaissent seules à leur date de fin"
+        type: object
+        list: true
+        fields:
+          - name: texte
+            label: "Texte de l'annonce"
+            type: string
+            required: true
+          - name: etablissement
+            label: Établissement concerné
+            type: select
+            required: true
+            options:
+              values:
+                - Toutes sections
+                - École maternelle Lakanal
+                - École élémentaire Lakanal
+                - Collège Fermat
+                - Collège Michelet
+                - Collège Les Chalets
+                - Lycée Fermat
+          - name: jusquau
+            label: "Afficher jusqu'au (inclus)"
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: lien
+            label: "Lien (facultatif) — adresse complète, ou /actualites/…"
+            type: string
+          - name: lien_label
+            label: "Texte du lien (facultatif — par défaut « En savoir plus »)"
+            type: string
+
   - name: actualites
     label: Actualités
     type: collection
