@@ -1,11 +1,4 @@
-# Annonces affichées en bandeau, sous le menu.
-#
-# Une annonce apparaît sur la page d'accueil ET sur la page de l'établissement
-# concerné. « Toutes sections » l'affiche sur les six pages.
-#
-# Chaque annonce DISPARAÎT TOUTE SEULE après la date « jusquau » : il n'y a
-# jamais rien à supprimer. Deux annonces au maximum sont affichées à la fois.
-#
-# Le plus simple est de les saisir dans Pages CMS, rubrique « Annonces ».
-
-liste: []
+liste:
+  - texte: Réunion d'information le mardi 15 septembre à 18h, site de Saint-Aubin
+    etablissement: Collège Michelet
+    jusquau: 2026-09-16
