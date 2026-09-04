@@ -74,6 +74,32 @@ Les identifiants de connexion **ne figurent pas dans ce guide** (il est public).
 >
 > Choisissez donc « Toutes sections » uniquement pour ce qui concerne vraiment toutes les familles (adhésions, assemblée générale, vœux…), sinon les pages d'établissement se remplissent d'informations qui ne les concernent pas.
 
+---
+
+## Annoncer une réunion — le bandeau d'annonces
+
+À côté d'« Actualités », Pages CMS propose une rubrique **« Annonces »**. Elle sert aux informations courtes et datées : une réunion, une date limite d'inscription, une vente qui se termine.
+
+Une annonce s'affiche dans un **bandeau rose, juste sous le menu**. Quatre champs :
+
+| Champ | Explication |
+|---|---|
+| **Texte de l'annonce** | Une phrase. « Réunion parents-professeurs le mardi 14 octobre à 18 h. » |
+| **Établissement concerné** | Décide **où** l'annonce s'affiche. Voir l'encadré ci-dessous. |
+| **Afficher jusqu'au** | Date de disparition automatique. Obligatoire. |
+| **Lien** *(facultatif)* | Vers un article, un PDF, une inscription. |
+
+> ### Où s'affiche une annonce
+>
+> - Une annonce liée à **un établissement** n'apparaît **que sur la page de cet établissement**. C'est voulu : à la rentrée, les six réunions tomberaient en même temps et rendraient la page d'accueil illisible.
+> - Une annonce **« Toutes sections »** apparaît sur la **page d'accueil** et sur les **six pages d'établissement**. À réserver à ce qui concerne vraiment tout le monde — assemblée générale, ouverture des adhésions.
+
+**Vous n'avez jamais à supprimer une annonce.** Elle disparaît d'elle-même le lendemain de sa date de fin, chez tous les visiteurs. C'est la raison d'être de ce champ : une annonce périmée en haut de page est ce qui fait le plus vieillir un site.
+
+**Deux annonces au maximum** s'affichent en même temps sur une page. Au-delà, plus personne ne les lit. Si vous en saisissez davantage, seules les deux premières de la liste apparaissent — réordonnez-les pour choisir lesquelles.
+
+---
+
 ### Pour supprimer un article
 
 Dans Pages CMS, ouvrir l'article, puis le menu **« … »** en haut à droite et **« Delete »**.
