@@ -59,12 +59,13 @@
   @media (prefers-color-scheme:dark){
     .site-header{background-image:url('{{ "/assets/mur-rose-3-sombre.jpg" | relative_url }}')}
   }
-  .annonce{background:var(--rose-soft);border-bottom:1px solid var(--line)}
-  .annonce .in{max-width:1080px;margin:0 auto;padding:12px 24px;
-    display:flex;gap:8px 16px;align-items:baseline;flex-wrap:wrap}
-  .annonce .ou{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--rose-deep);font-weight:700;white-space:nowrap}
-  .annonce .quoi{font-weight:600;font-size:.96rem}
+  .annonce{background:var(--surface);border-bottom:1px solid var(--line);
+    border-left:5px solid var(--rose)}
+  .annonce .in{max-width:1080px;margin:0 auto;padding:14px 24px;
+    display:flex;gap:10px 16px;align-items:center;flex-wrap:wrap}
+  .annonce .chip{background:var(--rose);color:#fff;font-size:.68rem;letter-spacing:.1em;
+    text-transform:uppercase;font-weight:700;padding:4px 12px;border-radius:999px;white-space:nowrap}
+  .annonce .quoi{font-weight:650;font-size:1.02rem}
   .annonce .lien{font-weight:650;color:var(--rose-deep);text-decoration:none;white-space:nowrap}
   .annonce .lien:hover{text-decoration:underline}
 
@@ -292,6 +293,7 @@
       {%- assign vues = vues | plus: 1 -%}
   <aside class="annonce" data-jusquau="{{ a.jusquau | date: '%Y-%m-%d' }}">
     <div class="in">
+      <span class="chip">À noter</span>
       <span class="quoi">{{ a.texte }}</span>
       {%- if a.lien and a.lien != "" %}
       <a class="lien" href="{{ a.lien }}">{{ a.lien_label | default: "En savoir plus" }} &rarr;</a>
