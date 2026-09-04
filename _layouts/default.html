@@ -59,6 +59,15 @@
   @media (prefers-color-scheme:dark){
     .site-header{background-image:url('{{ "/assets/mur-rose-3-sombre.jpg" | relative_url }}')}
   }
+  .annonce{background:var(--rose-soft);border-bottom:1px solid var(--line)}
+  .annonce .in{max-width:1080px;margin:0 auto;padding:12px 24px;
+    display:flex;gap:8px 16px;align-items:baseline;flex-wrap:wrap}
+  .annonce .ou{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--rose-deep);font-weight:700;white-space:nowrap}
+  .annonce .quoi{font-weight:600;font-size:.96rem}
+  .annonce .lien{font-weight:650;color:var(--rose-deep);text-decoration:none;white-space:nowrap}
+  .annonce .lien:hover{text-decoration:underline}
+
   .site-header .bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 24px;max-width:1080px;margin:0 auto}
   .logo{display:flex;align-items:center}
   .logo img{height:34px;width:auto;filter:invert(var(--logo-invert))}
@@ -257,6 +266,41 @@
     </div>
   </header>
 
+  {%- comment -%}
+    Annonces. La page d'accueil ne montre QUE les annonces « Toutes sections » :
+    sans cette regle, les six reunions de rentree s'y empileraient. Une annonce
+    propre a un etablissement n'apparait que sur la page de cet etablissement.
+    Filtrees a la construction sur la date de fin, puis re-verifiees dans le
+    navigateur (script en bas de page) pour qu'une annonce perimee disparaisse
+    meme sans nouvelle publication. Deux au maximum par page.
+  {%- endcomment -%}
+  {%- assign auj = site.time | date: "%Y%m%d" | plus: 0 -%}
+  {%- assign vues = 0 -%}
+  {%- for a in site.data.annonces.liste -%}
+    {%- assign fin = a.jusquau | date: "%Y%m%d" | plus: 0 -%}
+    {%- assign montrer = false -%}
+    {%- if fin >= auj and vues < 2 -%}
+      {%- if page.url == "/" and a.etablissement == "Toutes sections" -%}
+        {%- assign montrer = true -%}
+      {%- elsif page.etab and a.etablissement == page.etab -%}
+        {%- assign montrer = true -%}
+      {%- elsif page.etab and a.etablissement == "Toutes sections" -%}
+        {%- assign montrer = true -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- if montrer -%}
+      {%- assign vues = vues | plus: 1 -%}
+  <aside class="annonce" data-jusquau="{{ a.jusquau | date: '%Y-%m-%d' }}">
+    <div class="in">
+      <span class="quoi">{{ a.texte }}</span>
+      {%- if a.lien and a.lien != "" %}
+      <a class="lien" href="{{ a.lien }}">{{ a.lien_label | default: "En savoir plus" }} &rarr;</a>
+      {%- endif %}
+    </div>
+  </aside>
+    {%- endif -%}
+  {%- endfor %}
+
   {{ content }}
 
   <footer class="site-footer" id="contact">
@@ -283,6 +327,19 @@
     });
     document.addEventListener('click', function (e) {
       if (m.open && !m.contains(e.target)) m.open = false;
+    });
+  })();
+
+  // Retire les annonces dont la date de fin est passée. Le site n'étant
+  // reconstruit qu'à chaque publication, cette vérification au moment de la
+  // visite garantit qu'aucune annonce périmée ne reste affichée.
+  (function () {
+    var d = new Date();
+    var auj = d.getFullYear() + '-' +
+      String(d.getMonth() + 1).padStart(2, '0') + '-' +
+      String(d.getDate()).padStart(2, '0');
+    document.querySelectorAll('.annonce[data-jusquau]').forEach(function (el) {
+      if (el.getAttribute('data-jusquau') < auj) el.remove();
     });
   })();
 </script>
