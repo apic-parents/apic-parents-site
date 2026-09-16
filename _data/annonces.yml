@@ -1,4 +1,14 @@
 liste:
+  - texte: Réunion d'information Assos de Parents d'Elèves 2026/2027 - Mardi 22
+      septembre
+    etablissement: Collège Les Chalets
+    jusquau: 2026-09-22
+    lien_label: La réunion d'information aux familles aura lieue le mardi 22/09/2026
+      au collège. L'heure sera précisée prochainement. Si vous souhaitez être
+      tenu informé, écrivez-nous (apic.leschalets@gmail.com). Cette réunion sera
+      l'occasion de rencontrer les associations de parents d'élèves, d'échanger
+      sur notre fonctionnement, la scolarité de votre(vos) enfant(s), et les
+      différentes possibilités d'engagement.
   - texte: Réunion de rentrée le mardi 15 septembre à 18 h, site de Saint-Aubin —
       ouverte à tous les parents, adhérents ou non.
     etablissement: Collège Michelet
@@ -11,13 +21,3 @@ liste:
     jusquau: 2026-09-07
     lien: https://apic-parents.github.io/apic-parents-site/actualites/2026/09/04/photo-de-groupe-2026/
     lien_label: Tous les détails
-  - texte: Réunion d'information Assos de Parents d'Elèves 2026/2027 - Mardi 22
-      septembre
-    etablissement: Collège Les Chalets
-    jusquau: 2026-09-22
-    lien_label: La réunion d'information aux familles aura lieue le mardi 22/09/2026
-      au collège. L'heure sera précisée prochainement. Si vous souhaitez être
-      tenu informé, écrivez-nous (apic.leschalets@gmail.com). Cette réunion sera
-      l'occasion de rencontrer les associations de parents d'élèves, d'échanger
-      sur notre fonctionnement, la scolarité de votre(vos) enfant(s), et les
-      différentes possibilités d'engagement.
