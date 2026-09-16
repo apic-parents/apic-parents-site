@@ -1,7 +1,7 @@
 ---
 title: Enquête Déplacements 2025
 date: 2025-06-01
-slug: Questionnaire_Transport
+slug: C-Questionnaire_Transport
 etablissement: Collège Les Chalets
 tag: Déplacements
 thumbnail: /assets/uploads/Capture d’écran 2026-09-16 224123.png
