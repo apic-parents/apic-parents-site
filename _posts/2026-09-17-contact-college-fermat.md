@@ -18,7 +18,5 @@ o Le secrétariat : [fermatsecretariat@gmail.com](mailto:fermatsecretariat@gmail
 
 o La vie scolaire : [viescolairefermat1@outlook.com](mailto:viescolairefermat1@outlook.com)
 
-Dès que les services seront de nouveau actifs vous en serez informés et les canaux de communication
-
-habituels pourront être utilisés et les adresses « gmail et outlook» seront désactivées.
+Dès que les services seront de nouveau actifs vous en serez informés et les canaux de communication habituels pourront être utilisés et les adresses « gmail et outlook» seront désactivées.
 
