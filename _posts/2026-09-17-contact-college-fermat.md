@@ -4,6 +4,9 @@ date: 2026-09-17
 slug: contact college fermat
 etablissement: Collège Fermat
 tag: Vie scolaire
+thumbnail: /assets/uploads/Screenshot 2026-09-17 at 12-31-08 Contact Support
+  Icon Flat Design Vector. Email And Phone Icon 14468418 Vector Art at
+  Vecteezy.png
 summary: Le collège ne pouvant toujours pas recevoir ou envoyer de mail avec les
   adresses e-mail institutionnelles, des adresses e-mail de remplacement ont été
   créées que vous trouverez ici.
