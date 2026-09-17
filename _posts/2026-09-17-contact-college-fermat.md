@@ -4,7 +4,9 @@ date: 2026-09-17
 slug: contact college fermat
 etablissement: Collège Fermat
 tag: Vie scolaire
-summary: Adresses mail de substitution pour contacter le collège Fermat.
+summary: Le collège ne pouvant toujours pas recevoir ou envoyer de mail avec les
+  adresses e-mail institutionnelles, des adresses e-mail de remplacement ont été
+  créées que vous trouverez ici.
 ---
 A la suite de la cyber attaque dont a été victime l'académie de Toulouse le 19/08 /2026, toutes les fonctionnalités de communication académiques ont été suspendues ( messagerie, accès à l’ENT et à Pronote etc…) et le collège ne peut toujours pas recevoir ou envoyer de mail avec les adresses e-mail institutionnelles.
 
