@@ -1,0 +1,25 @@
+---
+title: Panne informatique / comment contacter le collège Fermat?
+date: 2026-09-17
+slug: contact college fermat
+etablissement: Collège Fermat
+tag: Vie scolaire
+---
+A la suite de la cyber attaque dont a été victime l'académie de Toulouse le 19/08 /2026, toutes les fonctionnalités de communication académiques ont été suspendues ( messagerie, accès à l’ENT et à Pronote etc…).
+
+Par conséquent ,je vous prie de trouver ci-dessous les modalités mise en œuvre pour contacter les différents
+
+services du collège:
+
+➢ Les lignes téléphoniques restent inchangées ;
+
+➢ Pour contacter par mail :
+
+o Le secrétariat : [fermatsecretariat@gmail.com](mailto:fermatsecretariat@gmail.com)
+
+o La vie scolaire : [viescolairefermat1@outlook.com](mailto:viescolairefermat1@outlook.com)
+
+Dès que les services seront de nouveau actifs vous en serez informés et les canaux de communication
+
+habituels pourront être utilisés et les adresses « gmail et outlook» seront désactivées.
+
