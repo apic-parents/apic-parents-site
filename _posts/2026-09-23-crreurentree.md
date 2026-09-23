@@ -14,18 +14,15 @@ Mardi 22/09 à 17h45 s'est tenue une réunion de présentation des associations 
 
 En introduction, la Principale a fait un point sur la rentrée:
 
-- Rentrée très compliquée en raison des **perturbations informatiques**. Impossibilité d'utiliser les outils Éducation Nationale pour communiquer avec les familles. La base de donnée des parents n'est pas remontée dans Pronote ce qui rend impossible de communiquer via ces outils.
+- Rentrée très compliquée en raison des **perturbations informatiques**. Impossibilité d'utiliser les outils Éducation Nationale pour communiquer avec les familles. La base de donnée des parents n'est pas remontée dans Pronote ce qui rend impossible de communiquer via ces outils. 
+- Au niveau des effectifs, tous les postes sont pourvus (titulaires + contractuels). Il y a eu quelques absences ponctuelles liées à des enfants malades ou des soucis de santée, mais pas de "grosses absences". La professeure d'allemand qui était arrêtée pour maladie à la rentrée rentre la semaine prochaine.
 
-La Principale nous a indiqué que l'ENT venait d'être relancé, cependant rien ne fonctionne ce jour.
+- La Principale nous a indiqué que l'ENT venait d'être relancé, cependant rien ne fonctionne ce jour.
 
 - Les classes ne sont pas pleines (hormis les 5èmes). Ce qui fait que le collège accueille encore régulièrement de nouveaux élèves (affectations tardives, exclusions d'autres établissements, etc.).
-
 - Les **élections de parents d'élèves** sont reportées au 13/11 du fait de la panne informatique. Ces élections se tiendrons de manière dématérialisée (décision actée l'an dernier) via Pronote.
-
 - Du fait de ce report, deux CA se tiendront en suivant en novembre, l'ordre du jour ne tenant probablement pas en une seule réunion (2h maximum).
-
 - S'il est nécessaire avant les élections de réunir un CA (ou Conseil de Discipline), ce seront les élus de l'an dernier qui seront convoqués.
-
 - **Voyages** : Trois voyages sont prévus cette année : Espagne (Barcelone), Italie (Rome) et Allemagne.
 
 La politique du collège est de permettre à chaque élève de participer à au moins un voyage au cours de sa scolarité. Les 6èmes ne sont pas concernés.
@@ -39,7 +36,6 @@ Un autre petit voyage à Carcassonne ou à Foix sera proposé par un professeur.
 La Principale explique que, bien que le brevet ne soit pas officiellement bloquant pour le passage au lycée, les critères d'admissibilité dans les filières professionnelles sont les mêmes que pour l'obtention du brevet (résultats de l'élève) et que l'échec au brevet se traduit malheureusement par des difficultés d'orientation en sortie de collège. Plusieurs élèves redoublent cette année faute d'orientation.
 
 - **AESH / Situation des élèves à profil** : tension au niveau des AESH (Accompagnateurs d'Élèves en Situation de Handicap) : 13 élèves ont une notification MDPH ouvrant droit à un accompagnement à temps plein, près de 25 autres élèves notifiés pour un accompagnement à temps partiel, alors que le collège ne dispose que de 10 AESH. La situation est donc très compliquée.
-
 - **Infirmière scolaire** : la titulaire du poste est actuellement en arrêt maladie. Son retour est prévu en fin de mois. Elle est remplacée par une contractuelle présente à temps complet au collège.
 
 Lorsque l'infirmière titulaire reviendra, elle sera présente à mi-temps et couvrira en même temps les écoles du secteur. Il n'y aura pas de recrutement d'un second mi-temps pour compléter son poste contrairement à l'an dernier. 
