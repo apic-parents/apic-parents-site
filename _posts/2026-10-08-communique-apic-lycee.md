@@ -1,8 +1,9 @@
 ---
-title: "Communiqué de l’APIC du lycée Fermat : pour un retour au calme et au dialogue"
+title: Communiqué de l’APIC du lycée Fermat
 date: 2026-10-08
 slug: communique-apic-lycee
 etablissement: Toutes sections
+summary: Pour un retour au calme et au dialogue
 ---
 Les événements de ces derniers jours aux abords de plusieurs lycées de France ont suscité de l’inquiétude chez de nombreuses familles. L’APIC, association toulousaine de parents d’élèves, indépendante de toute organisation politique ou syndicale, tient à exprimer sa position.
 
