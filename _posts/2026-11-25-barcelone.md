@@ -1,5 +1,5 @@
 ---
-title: Voyage à Barcelone
+title: Voyage à Barcelone - Février 2027
 date: 2026-11-25
 slug: Barcelone
 etablissement: Collège Les Chalets
