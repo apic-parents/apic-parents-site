@@ -18,5 +18,7 @@ La FCPE a obtenu 5 sièges et l'APIC 1.
 
 
 
-L'analyse détaillée du vote démontre que c'est en 6ème CALYPSO que l'on a le plus voté 35% de participation et en 4ème GOYA que la participation a été la plus faible (2%)
+L'analyse détaillée du vote démontre que c'est en 6ème CALYPSO que l'on a le plus voté 35% de participation et en 4ème GOYA que la participation a été la plus faible (2%). 
+
+*Le chiffrage de la participation a été obtenu en comptant 2 représentants légaux par élève et en ne tenant pas compte des fratries.*
 
